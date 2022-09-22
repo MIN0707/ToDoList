@@ -10,9 +10,8 @@ interface Todo {
 	text: string,
 	done: boolean
 }
-
+let id = 0;
 function App(): JSX.Element {
-	const [id, setId] = useState(0);
 	
 	const [todo, setTodo] = useState('');
 	
@@ -26,12 +25,8 @@ function App(): JSX.Element {
 		}
 	}
 	
-	function getTodoId(): number {
-		return id;
-	}
-	
 	function nextTodoId(): void {
-		setId(id + 1);
+		id = (id + 1);
 	}
 	
 	function onChangeEvent(event: React.ChangeEvent<HTMLInputElement>): void {

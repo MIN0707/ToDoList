@@ -1,5 +1,4 @@
 import TodoItem from "../TodoItem/TodoItem";
-import {useEffect, useRef} from "react";
 
 interface Todo {
 	id: number,
@@ -14,6 +13,9 @@ type TodoFunction = {
 }
 
 function TodoList({switchDone, removeTodo, todoLists}: TodoFunction): JSX.Element {
+	/*todoLists.map((todo: Todo) => (
+		console.log(todo.id)
+	))*/
 	return <div className={'animation'}>
 		{todoLists.map((todo: Todo) => (
 			<TodoItem
