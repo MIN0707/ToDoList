@@ -1,4 +1,4 @@
-import React, {SyntheticEvent, useRef} from 'react';
+import React, {SyntheticEvent} from 'react';
 import {MdCheckBox, MdCheckBoxOutlineBlank, MdDelete} from 'react-icons/md';
 import {TodoItemBox, TodoItemContainer} from "./TodoItemStyled";
 
