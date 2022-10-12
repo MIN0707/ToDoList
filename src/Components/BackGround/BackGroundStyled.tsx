@@ -39,11 +39,14 @@ export const Flex2Div = styled.div`
   position: absolute;
   top: 10%;
   right: 5%;
-  width: 30%;
+  width: 37%;
   height: 80%;
   display: flex;
   flex-direction: column;
   transition: 1s;
   overflow-x: hidden;
   overflow-y: scroll;
+  @media(max-width: 1445px) {
+    width: 35%;
+  }
 `

@@ -22,7 +22,14 @@
 
 
 .open {
-    margin-right: 30%;
+    margin-right: 35%;
+}
+
+@media(max-width: 1445px) {
+    .open
+    {
+        margin-right: 40%;
+    }
 }
 
 .line {

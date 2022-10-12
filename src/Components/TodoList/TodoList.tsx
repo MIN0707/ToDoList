@@ -1,4 +1,6 @@
 import TodoItem from "../TodoItem/TodoItem";
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
+import './TodoList.css'
 
 interface Todo {
 	id: number,
@@ -16,15 +18,22 @@ function TodoList({switchDone, removeTodo, todoLists}: TodoFunction): JSX.Elemen
 	/*todoLists.map((todo: Todo) => (
 		console.log(todo.id)
 	))*/
-	return <div className={'animation'}>
-		{todoLists.map((todo: Todo) => (
-			<TodoItem
-				switchDone={switchDone}
-				removeTodo={removeTodo}
-				key={todo.id}
-				todo={todo}></TodoItem>
-		))}
-	</div>
+	return (
+		// <div className={'animation'}>
+		<TransitionGroup component="ul">
+			{todoLists.map((todo: Todo) => (
+				<CSSTransition key={todo.id} timeout={700} classNames="item">
+					<TodoItem
+						switchDone={switchDone}
+						removeTodo={removeTodo}
+						key={todo.id}
+						todo={todo}
+					/>
+				</CSSTransition>
+			))}
+		</TransitionGroup>
+		// </div>
+	)
 }
 
 export default TodoList;

@@ -6,6 +6,7 @@ export const TodoItemContainer = styled.div`
 `
 export const TodoItemBox = styled.div`
   padding: 5px;
+  width: 100%;
   font-size: 30px;
   height: 40px;
   line-height: 40px;
@@ -18,4 +19,5 @@ export const TodoItemBox = styled.div`
   color: white;
   text-shadow: 4px 4px 3px #888;
   font-family: '양진체', serif;
+  white-space: nowrap;
 `
