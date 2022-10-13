@@ -85,12 +85,12 @@ function App(): JSX.Element {
 				<InputContainer>
 					<InputTitle>What are you doing today?</InputTitle>
 					<InputBox
+						ref={input => input && input.focus()}
 						type='text'
 						autoComplete='off'
 						onKeyUp={onKeyboardEvent}
 						onChange={onChangeEvent}
 						value={todo}
-						placeholder={'Enter your todo'}
 					/>
 				</InputContainer>
 			</FlexDiv>
