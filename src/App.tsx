@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {BackGround, Flex2Div, FlexDiv} from './Components/BackGround/BackGroundStyled'
 import Clock from "./Components/Clock/Clock";
-import {InputContainer, InputBox, InputTitle} from "./Components/Input/InputStyled";
+import {InputBox, InputContainer, InputTitle} from "./Components/Input/InputStyled";
 import './App.css'
 import TodoList from "./Components/TodoList/TodoList";
 
@@ -71,6 +71,15 @@ function App(): JSX.Element {
 	
 	return (
 		<BackGround>
+			<div className={'tip'}>
+				<span>
+					팁: 쉬프트 + 휠 사용시 가로 스크롤 이 가능합니다
+				</span>
+				<br/>
+				<span>
+					TIP: Horizontal scrolling is possible when using shift + wheel
+				</span>
+			</div>
 			<FlexDiv className={todoList.length !== 0 ? 'open' : ''}>
 				<Clock/>
 				<InputContainer>
@@ -81,19 +90,14 @@ function App(): JSX.Element {
 						onKeyUp={onKeyboardEvent}
 						onChange={onChangeEvent}
 						value={todo}
+						placeholder={'Enter your todo'}
 					/>
 				</InputContainer>
 			</FlexDiv>
 			{
 				todoList.length === 0
 					?
-					<FlexDiv>
-						<TodoList
-							switchDone={switchDone}
-							removeTodo={removeTodo}
-							todoLists={todoList}
-						/>
-					</FlexDiv>
+					""
 					:
 					<Flex2Div>
 						<TodoList

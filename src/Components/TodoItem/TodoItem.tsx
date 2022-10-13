@@ -1,4 +1,4 @@
-import React, {SyntheticEvent} from 'react';
+import React from 'react';
 import {MdCheckBox, MdCheckBoxOutlineBlank, MdDelete} from 'react-icons/md';
 import {TodoItemBox, TodoItemContainer} from "./TodoItemStyled";
 
@@ -19,13 +19,15 @@ const TodoItem = ({switchDone, removeTodo, todo}: TodoFunction) => {
 	const text = todo.text;
 	const done = todo.done;
 	
-	function wheelEvent(event: SyntheticEvent): void {
+	/*function wheelEvent(event: SyntheticEvent): void {
+		event.preventDefault()
+		event.stopPropagation()
 		if(event.nativeEvent instanceof WheelEvent) {
-			event.currentTarget.scrollLeft += (event.nativeEvent.deltaY);
+			event.currentTarget.scrollLeft += (event.nativeEvent.deltaY)/ 5;
 		}
-	}
+	}*/
 	
-	return <TodoItemBox className={'fade-in todobox'} onWheel={wheelEvent}>
+	return <TodoItemBox className={'fade-in todobox'} /*onWheel={wheelEvent}*/>
 		<TodoItemContainer>
 			{done ? <MdCheckBox onClick={() => {
 				switchDone(id);

@@ -24,6 +24,9 @@ export const BackGround = styled.div`
   background-size: cover;
   display: flex;
   justify-content: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const FlexDiv = styled.div`
@@ -46,7 +49,22 @@ export const Flex2Div = styled.div`
   transition: 1s;
   overflow-x: hidden;
   overflow-y: scroll;
-  @media(max-width: 1445px) {
+  @media (max-width: 1445px) {
     width: 35%;
+  }
+  @media (max-width: 1366px) {
+    width: 33%;
+  }
+  @media (max-width: 1280px) {
+    width: 34%;
+  }
+  @media (max-width: 1024px) {
+    width: 35%;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
+    right: 2.5%;
+    top: 40%;
+    height: 50%;
   }
 `

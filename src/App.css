@@ -25,15 +25,21 @@
     margin-right: 35%;
 }
 
-@media(max-width: 1445px) {
-    .open
-    {
-        margin-right: 40%;
-    }
-}
-
 .line {
     text-decoration-line: line-through;
+}
+
+.tip {
+    font-family: '양진체', serif;
+    font-size: 1rem;
+    color: white;
+    padding: 0;
+    text-align: left;
+    margin: 10% 0 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    white-space: pre-line;
 }
 
 html, body {
@@ -57,5 +63,38 @@ html, body {
     100% {
         opacity: 1;
         width: 100%;
+    }
+}
+
+@media (max-width: 1445px) {
+    .open {
+        margin-right: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .open {
+        margin-right: 0;
+        margin-bottom: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .open {
+        margin-bottom: 90%;
+    }
+
+    .tip {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .open {
+        margin-bottom: 120%;
+    }
+
+    .tip {
+        font-size: 0.5rem;
     }
 }
