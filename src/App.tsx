@@ -59,6 +59,9 @@ function App(): JSX.Element {
 		const todos = todoList.filter(todo => todo.id !== id)
 		todos.sort();
 		setTodoList(todos);
+		if(todos.length === 0){
+			setId(0);
+		}
 	}
 	
 	function switchDone(id: number): void {
